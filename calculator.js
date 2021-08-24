@@ -3,11 +3,24 @@ function sum(a, b) {
 }
 
 function subtract(a, b) {
-  return;
+  if (!a && !b) {
+    return 0;
+  }
+  if (!a) {
+    return b;
+  }
+  if (!b) {
+    return a;
+  } else {
+    return a - b;
+  }
 }
 
 function divide(a, b) {
-  return;
+  if (b == 0) {
+    throw new Error('no puedes dividir entre 0');
+  }
+  return a / b;
 }
 
 function multiply(a, b) {
